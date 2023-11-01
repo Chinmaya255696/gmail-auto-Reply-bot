@@ -1,6 +1,13 @@
+require('dotenv').config();
 
-const CLIENT_ID = "539640497595-nslrl2i58uf9l4fjm3e8bq8db66f49us.apps.googleusercontent.com";
-const CLEINT_SECRET = "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";
-const REDIRECT_URI = "https://developers.google.com/oauthplayground";
-const REFRESH_TOKEN ="1//04rRXptTaW04vCgYIARAAGAQSNwF-L9IrWHEi2dAcKaVR99XsoZ98sAhxk36tIHAFTw4xEBL0ASlijdcik9m0nnmNzlrZRW5Ctik";
-module.exports = { CLIENT_ID, CLEINT_SECRET, REDIRECT_URI, REFRESH_TOKEN };
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const REDIRECT_URI = process.env.REDIRECT_URI;
+const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
+
+module.exports = {
+  CLIENT_ID,
+  CLIENT_SECRET,
+  REDIRECT_URI,
+  REFRESH_TOKEN,
+};
